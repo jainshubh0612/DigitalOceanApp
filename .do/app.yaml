@@ -1,0 +1,8 @@
+name: DigitalOceanApp
+services:
+- environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: jainshubh0612/DigitalOceanApp
+  name: DigitalOceanApp
