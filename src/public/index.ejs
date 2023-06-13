@@ -1,0 +1,36 @@
+<%- include('_header') %>
+
+        <section>
+                <div class="row">
+                        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border-bottom-light">
+                                <%- include('_sidebar') %>
+                        </div>
+                        <div class="col-auto col-md-9 col-xl-10 px-3 py-3">
+
+                                <div class="row">                                     
+                                        <% for(var i=0; i<1000; i++) {%>
+                                        <div class="col-md-2">
+                                               
+                                                <div class="card mt-3 " style=" min-height: 350px; max-height: 350px;">
+                                                        <div class="p-2 ">
+                                                                <img class="card-img-top"
+                                                                src="<%= data[i].image %>"
+                                                                alt="<%= data[i].name %>" height="150px"  class=" img-fluid img-thumbnail">
+                                                        </div>
+                        
+                                                        <div class="card-body overflow-none">
+                                                                <h5 class="card-title"><%= data[i].manufacturer %></h5>
+                                                                <p class="card-text text"><%= data[i].shortDescription %></p>
+                                                        </div>
+                                                        <div class="card-footer pt-1 pb-0" style="max-height: 30;">
+                                                                <p class="text-center">Buy at $<%= data[i].salePrice %></p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <% } %>
+                                </div>
+                            
+                        </div>
+                </div>
+
+        </section>
